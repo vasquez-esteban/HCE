@@ -4,17 +4,32 @@ from Tipo import Tipo
 
 class FactorRiesgo:
     def __init__(
-            self,
-            identificacionFactorRiesgo: int,
-            identificacionPaciente: int,
-            identificacionProfesionalSalud: int,
-            nombre: str,
-            estatus: str,
-            tipo: Tipo,
-            motivoCierre: str,
-            historia: HistoriaFactorRiesgo,
-            notas: list[str],
+        self,
+        identificacionFactorRiesgo: int,
+        identificacionPaciente: int,
+        identificacionProfesionalSalud: int,
+        nombre: str,
+        estatus: str,
+        tipo: Tipo,
+        motivoCierre: str,
+        historia: HistoriaFactorRiesgo,
+        notas: list[str],
     ):
+        """
+        Clase que representa un factor de riesgo asociado a la salud de un paciente.
+
+        Args:
+            identificacionFactorRiesgo (int): Identificador único para el factor de riesgo.
+            identificacionPaciente (int): Identificador del paciente asociado.
+            identificacionProfesionalSalud (int): Id del profesional que gestiona el factor.
+            nombre (str): Nombre o descripción del factor de riesgo.
+            estatus (str): Estado del factor de riesgo (Activo, Cerrado).
+            tipo (Tipo): Representa el tipo/categoría del factor de riesgo.
+            motivoCierre (str): Razón de cierre del factor de riesgo (si aplica).
+            historia (HistoriaFactorRiesgo): Representa la evolución del factor.
+            notas (lista de str): Una lista de notas adicionales del factor de riesgo.
+        """
+
         self.identificacionFactorRiesgo = identificacionFactorRiesgo
         self._identificacionPaciente = identificacionPaciente
         self._identificacionProfesionalSalud = identificacionProfesionalSalud
@@ -25,6 +40,7 @@ class FactorRiesgo:
         self._historia = historia
         self._notas = notas
 
+    # Inicio de getters y setters
     @property
     def identificacionPaciente(self):
         return self._identificacionPaciente
@@ -81,5 +97,7 @@ class FactorRiesgo:
     def notas(self, value):
         self._notas = value
 
+    # Método propio de la clase
     def agregarNota(self, nota: str):
+        """Permite agregar notas a la lista de todas las notas"""
         self.notas.append(nota)

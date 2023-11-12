@@ -15,6 +15,20 @@ class Problema:
         historia: HistoriaProblema,
         notas: list[str],
     ):
+        """
+        Clase que representa un problema de salud asociado a un paciente.
+
+        Args:
+            identificacionProblema (int): Identificador único del problema de salud.
+            identificacionPaciente (int): Identificador del paciente con el problema.
+            identificacionProfesionalSalud (int): id del Profesional que gestiona el problema.
+            nombre (str): Nombre o descripción del problema de salud.
+            estatus (str): Estado del problema de salud (Activo, Cerrado).
+            tipo (Tipo): Representa el tipo/categoría del problema de salud.
+            motivoCierre (str): Razón de cierre del problema de salud (si aplica).
+            historia (HistoriaProblema): Representa datos históricos asociados.
+            notas (lista de str): Una lista de notas adicionales del problema de salud.
+        """
         self.identificacionProblema = identificacionProblema
         self._identificacionPaciente = identificacionPaciente
         self._identificacionProfesionalSalud = identificacionProfesionalSalud
@@ -25,6 +39,7 @@ class Problema:
         self._historia = historia
         self._notas = notas
 
+    # Inicio de métodos get y set
     @property
     def identificacionPaciente(self):
         return self._identificacionPaciente
@@ -82,4 +97,5 @@ class Problema:
         self._notas = value
 
     def agregarNota(self, nota: str):
+        """Método para agregar una nota a la lista de notas del problema"""
         self.notas.append(nota)
