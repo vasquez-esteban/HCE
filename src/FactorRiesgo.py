@@ -1,5 +1,5 @@
-from HistoriaFactorRiesgo import HistoriaFactorRiesgo
-from Tipo import Tipo
+from src.HistoriaFactorRiesgo import HistoriaFactorRiesgo
+from src.Tipo import Tipo
 
 
 class FactorRiesgo:

@@ -1,5 +1,5 @@
-from HistoriaProblema import HistoriaProblema
-from Tipo import Tipo
+from src.HistoriaProblema import HistoriaProblema
+from src.Tipo import Tipo
 
 
 class Problema:

@@ -1,5 +1,5 @@
-from FactorRiesgo import FactorRiesgo
-from Problema import Problema
+from src.FactorRiesgo import FactorRiesgo
+from src.Problema import Problema
 
 
 class Paciente:
@@ -41,7 +41,7 @@ class Paciente:
         Representación de cadena del objeto Paciente.
         """
         return (
-            f"Identificación del Paciente: {self.identificacionPaciente}"
-            f"Historia Previa:"
+            f"Identificación del Paciente: {self.identificacionPaciente}\n"
+            f"Historia Previa:\n"
             f"{self.historiaPrevia}"
         )

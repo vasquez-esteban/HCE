@@ -1,5 +1,5 @@
-from FactorRiesgo import FactorRiesgo
-from Problema import Problema
+from src.FactorRiesgo import FactorRiesgo
+from src.Problema import Problema
 
 
 class ProfesionalSalud:
