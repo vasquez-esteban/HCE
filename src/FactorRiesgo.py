@@ -1,9 +1,7 @@
 from pydantic import BaseModel, Field
-import data.modelos
 
 
 class FactorRiesgo(BaseModel):
-    identificacionFactorRiesgo: int = Field(gt=-1)
     identificacionPaciente: int = Field(gt=-1)
     identificacionProfesionalSalud: int = Field(gt=-1)
     nombre: str = Field(min_length=1)

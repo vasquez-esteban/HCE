@@ -3,7 +3,6 @@ import data.modelos
 
 
 class Problema(BaseModel):
-    identificacionProblema: int = Field(gt=-1)
     identificacionPaciente: int = Field(gt=-1)
     identificacionProfesionalSalud: int = Field(gt=-1)
     nombre: str = Field(min_length=1)
