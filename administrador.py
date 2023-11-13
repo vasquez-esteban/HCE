@@ -1,3 +1,1 @@
-# Transformar entradas de Datos
-# Create and Read
-# Authenticate
+# Se puede hacer una interfaz sencilla
