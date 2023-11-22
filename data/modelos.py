@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Text
 from data.database import Base
 
 
+# Crear modelos de clases para la conexión con SQLite
 class FactorRiesgo(Base):
     __tablename__ = 'Factor Riesgo'
 
